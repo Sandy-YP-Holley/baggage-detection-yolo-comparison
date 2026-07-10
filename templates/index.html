@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulasi Komparasi Objek - Universitas Gunadarma</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 30px; background-color: #f4f6f9; }
+        .grid { display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 380px; }
+        img { width: 100%; border-radius: 5px; border: 1px solid #ddd; }
+        button { background-color: #4A90E2; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #357ABD; }
+        .speed { font-weight: bold; color: #2C3E50; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Simulasi Komparasi Eksperimen Computer Vision</h2>
+    <p>Studi Kasus: Deteksi Barang Bawaan (Backpack/Luggage)</p>
+    
+    <form method="POST" enctype="multipart/form-data" style="margin-bottom: 20px;">
+        <input type="file" name="file" accept="image/*" required style="font-size: 16px;">
+        <br><br>
+        <button type="submit">Upload & Jalankan Komparasi</button>
+    </form>
+
+    {% if pred_v8 %}
+    <div class="grid">
+        <div class="card">
+            <h3>Foto Asli</h3>
+            <img src="/static/uploads/{{ original }}">
+        </div>
+        <div class="card" style="border-top: 4px solid #E67E22;">
+            <h3>Hasil Analisis YOLOv8</h3>
+            <img src="/static/uploads/{{ pred_v8 }}">
+            <p class="speed">Waktu Inferensi: {{ time_v8 }} ms</p>
+        </div>
+        <div class="card" style="border-top: 4px solid #2ECC71;">
+            <h3>Hasil Analisis YOLOv11</h3>
+            <img src="/static/uploads/{{ pred_v11 }}">
+            <p class="speed">Waktu Inferensi: {{ time_v11 }} ms</p>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
