@@ -20,16 +20,13 @@ Eksperimen dilakukan menggunakan dua skenario data uji: Skenario 1 (Baseline 200
 ## 🛠️ Cara Instalasi & Menjalankan di Lokal
 
 ### 1. Clone Repositori
-```bash
 git clone [https://github.com/USERNAME_ANDA/NAMA_REPO_ANDA.git](https://github.com/USERNAME_ANDA/NAMA_REPO_ANDA.git)
 cd NAMA_REPO_ANDA
 
-2. Install Dependencies
+### 2. Install Dependencies
 Pastikan Python sudah terinstall di perangkat Anda, lalu jalankan perintah:
-
-Bash
 pip install flask ultralytics torch torchvision
-3. Jalankan Aplikasi
-Bash
+
+### 3. Jalankan Aplikasi
 python app.py
 Buka browser Anda dan akses alamat http://127.0.0.1:5000.
