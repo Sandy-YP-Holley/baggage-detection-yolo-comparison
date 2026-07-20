@@ -8,15 +8,12 @@ st.set_page_config(layout="wide")
 st.title("Simulasi Komparasi Eksperimen Computer Vision")
 st.subheader("Studi Kasus: Deteksi Barang Bawaan (Backpack/Luggage)")
 
-# Load model lokal
 model_v8 = YOLO('best_yolov8_final.pt')
 model_v11 = YOLO('best_yolov11_final.pt')
 
-# Sudah diperbaiki menjadi st.file_uploader
 uploaded_file = st.file_uploader("Upload Foto Uji", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Simpan sementara
     img = Image.open(uploaded_file)
     img_path = "temp_image.jpg"
     img.save(img_path)
