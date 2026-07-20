@@ -1,6 +1,6 @@
 # Comparative Analysis of YOLOv8 and YOLO11 for Baggage Detection
 
-Aplikasi simulasi berbasis web (Flask) untuk membandingkan performa akurasi dan kecepatan inferensi antara dua generasi algoritma Object Detection: **YOLOv8** dan **YOLO11** (Studi Kasus: Deteksi Barang Bawaan / Backpack & Luggage). Proyek ini ditujukan untuk memenuhi eksperimen Penulisan Ilmiah / Tugas Akhir di Universitas Gunadarma.
+Aplikasi simulasi berbasis web (Flask) untuk membandingkan performa akurasi dan kecepatan inferensi antara dua generasi algoritma Object Detection: **YOLOv8** dan **YOLO11** (Studi Kasus: Deteksi Barang Bawaan / Backpack & Luggage). Proyek ini ditujukan untuk memenuhi Tugas Akhir Mata Kuliah Computer Vision di Universitas Gunadarma.
 
 ## 🚀 Fitur Utama
 - **Dual-Model Inference:** Menjalankan prediksi objek menggunakan dua arsitektur model berbeda secara bersamaan dalam satu kali klik.
